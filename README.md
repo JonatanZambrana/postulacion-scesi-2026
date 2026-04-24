@@ -44,5 +44,34 @@ Prefijos
 * **style:** Cambios de Formato o estilos
 * **test:** test o refactorizacion 
 
+## DIA 3
+### GITHUB Y SSH
+
+1 QUE ES GITHUB
+Plataforma en la nube que permite alojar, gestionar y colaborar en proyectos de SW utilizando Git
+
+2 GIT VS GIT HUB
+Git es el sistema de control de versiones y Github es el servidor donde estos se almacenan
+
+3 SSH Y HTTP 
+SSH conexion segura mediante una key y HTTPs clonar el repositorio
+
+4CONFIGURACION SSH 
+
+
+ssh-keygen -t ed25519 -C ""
+
+
+5 CREAR REPOSITORIO EN GITHUB  
+
+6 CLONAR REPOSITORIO EN GIT
+
+7 CAMBIOS
+
+* Subir Cambios 
+* Bajar Cambios 
+
+
+
 
 
