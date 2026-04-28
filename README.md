@@ -74,7 +74,26 @@ ssh-keygen -t ed25519 -C ""
 
 ##DIA 4
 
+# Día 4: Git Avanzado y Repositorios Remotos
 
+En esta sesión aprendimos a conectar nuestro trabajo local con la nube y a navegar por la historia del proyecto.
+
+## 1. Repositorios Remotos (`git remote`)
+Sirven para conectar tu computadora con servidores como GitHub.
+* `git remote add <nombre> <url>`: Conecta tu carpeta local con un repositorio en línea.
+* `git remote -v`: Lista las conexiones actuales.
+* `git remote set-url <nombre> <url>`: Cambia la dirección del repositorio remoto.
+
+## 2. Configuración de SSH
+Para manejar varias cuentas de GitHub en una misma PC:
+* Se crean llaves únicas con `ssh-keygen`.
+* Se configuran en un archivo `config` asignando alias a cada cuenta.
+* **Prioridad:** Las configuraciones locales del repositorio siempre mandan sobre las globales.
+
+## 3. Navegación con `git checkout`
+Sirve para "viajar en el tiempo" a commits anteriores o cambiar de rama.
+* **Detached HEAD:** Estado que ocurre al apuntar directamente a un commit y no a una rama. 
+* **Regla de oro:** No trabajes mucho tiempo en "Detached HEAD"; si vas a hacer cambios reales, mejor crea una rama nueva para no perder tu progreso.
 
 
 
