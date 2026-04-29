@@ -95,5 +95,8 @@ Sirve para "viajar en el tiempo" a commits anteriores o cambiar de rama.
 * **Detached HEAD:** Estado que ocurre al apuntar directamente a un commit y no a una rama. 
 * **Regla de oro:** No trabajes mucho tiempo en "Detached HEAD"; si vas a hacer cambios reales, mejor crea una rama nueva para no perder tu progreso.
 
+# Día 5
+
+
 
 
