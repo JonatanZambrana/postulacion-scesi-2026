@@ -97,6 +97,25 @@ Sirve para "viajar en el tiempo" a commits anteriores o cambiar de rama.
 
 # Día 5
 
+## DIA 6
+### RAMAS Y GITFLOW
+
+1. GESTIÓN DE RAMAS (`git branch`)
+* Crear: `git branch <nombre>`
+* Listar: `git branch`
+* Borrar: `git branch -D <nombre>`
+
+2. NAVEGACIÓN (`checkout` vs `switch`)
+* `git checkout <rama>`: El clásico (cuidado con el Detached HEAD).
+* `git switch <rama>`: El moderno, específico para ramas.
+* Crear y saltar: `git checkout -b <rama>` o `git switch -c <rama>`.
+
+3. GITFLOW (FLUJO DE TRABAJO)
+* **Main:** Código listo para producción.
+* **Develop:** Rama base para integración de nuevas funciones.
+* **Feature:** Para desarrollar nuevas características (nacen de develop).
+* **Release:** Preparación de lanzamientos (QA).
+* **Hotfix:** Arreglos urgentes en producción (nacen de main).
 
 
 
