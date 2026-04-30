@@ -117,5 +117,7 @@ Sirve para "viajar en el tiempo" a commits anteriores o cambiar de rama.
 * **Release:** Preparación de lanzamientos (QA).
 * **Hotfix:** Arreglos urgentes en producción (nacen de main).
 
+## DIA 7 
+
 
 
