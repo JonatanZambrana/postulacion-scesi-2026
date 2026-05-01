@@ -1,123 +1,76 @@
 # GIT HUB CON LA SCESI
 
-## DIA 1 
+## DÍA 1: INTRODUCCIÓN
 
-### INTRODUCCION
-- COMO NACIO GIT
-Lo creo un sujeto que necesitaba el programa
-- ARCHIVOS IMPORTANTES EN GIT 
-1 README.md 
-Una pequeña documentacion del Repositorio
-2 .gitignore
-Para no subir 1000 lineas de codigo de solo paquetes o de node
+*   **Origen de Git:** Creado por Linus Torvalds después de que la comunidad de Linux perdiera el acceso gratuito a BitKeeper.
+*   **Configuración Inicial:** Es esencial configurar la identidad con `git config --global user.name` y `user.email`.
+*   **Archivos Esenciales:**
+    1.  **README.md:** Documentación del repositorio.
+    2.  **.gitignore:** Define qué archivos o carpetas (como `node_modules` o `.env`) Git debe ignorar para no ensuciar el repositorio.
 
 
-## DIA 2 
-### STATES AND COMMITS
-- LOS ESTADOS DE GIT
-1 Directorio de Trabajo (Modificado)
-Para restaurar archivo
-git restore <archivoNombre>
-2 Stage Area (Preparado)
-Agregar al area de Staging
-git add . 
-git <Archivo>
-Para restaurar 
-git restore --staged <archivo>
+## DÍA 2: ESTADOS Y BUENAS PRÁCTICAS
 
-3 Repositorio Local (Confirmado)
-Para confirmar el Commit 
-git commit -m "mensaje"
-Deshacer el ultimo commit 
-git reset --soft HEAD~1 
+### Los 3 Estados de Git
+1.  **Directorio de Trabajo (Modified):** Archivos editados pero no guardados aún en la historia. Comando para deshacer: `git restore <archivo>`.
+2.  **Stage Area (Staging):** Área de espera para los cambios que se incluirán en el próximo commit. Comandos: `git add <archivo>` o `git add .`. Para sacar del área: `git restore --staged <archivo>`.
+3.  **Repositorio Local (Committed):** Cambios confirmados con un ID (hash) único. Comando: `git commit -m "mensaje"`.
 
-### BUENAS PRACTICAS 
-Prefijos 
-
-* **feat:** Nueva caracteristica para el Usuario
-* **fix:** Reparar bug o Arregar errores
-* **perf:** Cambios que mejoran el Rendimiento
-* **build:** Cambios en el sistema Build
-* **ci:** Cambios de Integracion Continua 
-* **docs:** Cambios en Documetacion
-* **refactor:** Refactorizacion de Codigo
-* **style:** Cambios de Formato o estilos
-* **test:** test o refactorizacion 
-
-## DIA 3
-### GITHUB Y SSH
-
-1 QUE ES GITHUB
-Plataforma en la nube que permite alojar, gestionar y colaborar en proyectos de SW utilizando Git
-
-2 GIT VS GIT HUB
-Git es el sistema de control de versiones y Github es el servidor donde estos se almacenan
-
-3 SSH Y HTTP 
-SSH conexion segura mediante una key y HTTPs clonar el repositorio
-
-4CONFIGURACION SSH 
-
-
-ssh-keygen -t ed25519 -C ""
-
-
-5 CREAR REPOSITORIO EN GITHUB  
-
-6 CLONAR REPOSITORIO EN GIT
-
-7 CAMBIOS
-
-* Subir Cambios 
-* Bajar Cambios 
-
-
-##DIA 4
-
-# Día 4: Git Avanzado y Repositorios Remotos
-
-En esta sesión aprendimos a conectar nuestro trabajo local con la nube y a navegar por la historia del proyecto.
-
-## 1. Repositorios Remotos (`git remote`)
-Sirven para conectar tu computadora con servidores como GitHub.
-* `git remote add <nombre> <url>`: Conecta tu carpeta local con un repositorio en línea.
-* `git remote -v`: Lista las conexiones actuales.
-* `git remote set-url <nombre> <url>`: Cambia la dirección del repositorio remoto.
-
-## 2. Configuración de SSH
-Para manejar varias cuentas de GitHub en una misma PC:
-* Se crean llaves únicas con `ssh-keygen`.
-* Se configuran en un archivo `config` asignando alias a cada cuenta.
-* **Prioridad:** Las configuraciones locales del repositorio siempre mandan sobre las globales.
-
-## 3. Navegación con `git checkout`
-Sirve para "viajar en el tiempo" a commits anteriores o cambiar de rama.
-* **Detached HEAD:** Estado que ocurre al apuntar directamente a un commit y no a una rama. 
-* **Regla de oro:** No trabajes mucho tiempo en "Detached HEAD"; si vas a hacer cambios reales, mejor crea una rama nueva para no perder tu progreso.
-
-# Día 5
-
-## DIA 6
-### RAMAS Y GITFLOW
-
-1. GESTIÓN DE RAMAS (`git branch`)
-* Crear: `git branch <nombre>`
-* Listar: `git branch`
-* Borrar: `git branch -D <nombre>`
-
-2. NAVEGACIÓN (`checkout` vs `switch`)
-* `git checkout <rama>`: El clásico (cuidado con el Detached HEAD).
-* `git switch <rama>`: El moderno, específico para ramas.
-* Crear y saltar: `git checkout -b <rama>` o `git switch -c <rama>`.
-
-3. GITFLOW (FLUJO DE TRABAJO)
-* **Main:** Código listo para producción.
-* **Develop:** Rama base para integración de nuevas funciones.
-* **Feature:** Para desarrollar nuevas características (nacen de develop).
-* **Release:** Preparación de lanzamientos (QA).
-* **Hotfix:** Arreglos urgentes en producción (nacen de main).
-
-## DIA 7 
+### Buenas Prácticas de Commits
+*   **Commits Atómicos:** Cada commit debe representar un único cambio lógico y pequeño.
+*   **Mensajes Semánticos:** Usar verbos imperativos y prefijos para mayor claridad:
+    *   `feat`: Nueva funcionalidad.
+    *   `fix`: Corrección de errores.
+    *   `docs`: Cambios en documentación.
+    *   `refactor`: Mejora de código sin cambiar funcionalidad.
+    *   `style`: Formato y estilos (no afecta lógica).
 
 
 
+## DÍA 3: GITHUB Y SSH
+
+*   **Git vs GitHub:** Git es la herramienta local; GitHub es la plataforma en la nube para alojar y colaborar en proyectos.
+*   **SSH (Secure Shell):** Método recomendado para conectar tu PC con GitHub sin pedir contraseña constantemente. Se genera con `ssh-keygen -t ed25519`.
+*   **Flujo Remoto Básico:**
+    *   `git remote add origin <url>`: Conecta el repo local con el remoto.
+    *   `git push`: Sube tus cambios al servidor.
+    *   `git pull`: Trae y fusiona los cambios del servidor a tu PC.
+
+
+
+## DÍA 4: GIT AVANZADO Y MULTI-SSH
+*   **Gestión de Remotos:** `git remote -v` para ver conexiones y `git remote set-url` para cambiarlas.
+*   **Multi-SSH:** Uso de un archivo `config` en `~/.ssh/` para gestionar múltiples cuentas de GitHub en una misma máquina mediante alias.
+*   **Navegación (Checkout):** Permite "viajar en el tiempo" a commits anteriores. Evitar trabajar mucho tiempo en estado **Detached HEAD** (punto fijo sin rama); si vas a hacer cambios, crea una rama nueva con `git checkout -b <nombre>`.
+
+
+
+## DÍA 5: RAMAS (BRANCHING)
+*   **¿Qué son?:** Bifurcaciones que permiten desarrollar funciones en paralelo sin afectar el código principal.
+*   **Comandos:** `git branch` (listar), `git branch <nombre>` (crear), `git branch -D` (borrar).
+*   **Switch vs Checkout:** `git switch` es el comando moderno (2019) especializado exclusivamente en cambiar de ramas para evitar errores accidentales.
+
+## DÍA 6: GITFLOW Y FUSIONES
+*   **Gitflow:** Flujo de trabajo organizado con ramas específicas: `main` (producción), `develop` (desarrollo), `feature` (nuevas funciones), `hotfix` (arreglos urgentes).
+*   **Fusiones (Merge):** `git merge --no-ff <rama>` une los cambios. El flag `--no-ff` (no fast-forward) es crucial para mantener un historial visual de la rama fusionada aunque esta sea borrada.
+*   **Actualización:** Usar `git fetch` para revisar cambios remotos sin mezclarlos todavía.
+
+
+
+## DÍA 7: PULL REQUESTS (PR) Y SEGURIDAD
+*   **¿Qué es un PR?:** Es la forma profesional de proponer cambios. Crea una solicitud para que el equipo revise tu código antes de integrarlo a la rama principal (`main` o `develop`).
+*   **Ventajas:**
+    *   **Seguridad:** Evita que cualquiera suba código malicioso o erróneo directamente.
+    *   **Revisión por Pares:** Fomenta el debate y la mejora del código antes de lanzarlo.
+*   **Protección del Repo:** GitHub permite bloquear ramas para obligar a que todo cambio pase por una revisión de PR antes de ser aceptado.
+
+
+
+## DÍA 8: CONTRIBUCIÓN A OPEN SOURCE
+*   **El Fork:** Si no eres colaborador directo de un proyecto, realizas un **Fork** (copia a tu propia cuenta de GitHub) desde la web.
+*   **Flujo de Contribución:**
+    1.  **Clonar:** `git clone` de tu fork personal.
+    2.  **Rama Nueva:** Crear una rama específica para tu mejora (ej. `docs/mejora-readme`).
+    3.  **Cambios y Commits:** Realizar las mejoras y hacer commit semántico.
+    4.  **Push:** Subir la rama a *tu* fork: `git push -u origin <rama>`.
+    5.  **PR Final:** Desde GitHub, abrir un Pull Request hacia el repositorio original.
